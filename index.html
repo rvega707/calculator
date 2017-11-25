@@ -11,6 +11,8 @@
 		<input type="text" name="num2" id="num2"><br>
 		<input type="button" name="btn1" id="btn1" value="+" onclick="addBy()">
 		<input type="button" name="btn2" id="btn2" value="-" onclick="subBy()">
+		<input type="button" name="btn3" id="btn3" value="x" onclick="mulBy()">
+		<input type="button" name="btn4" id="btn4" value="/" onclick="divBy()">
 		<div id="output"></div>
 	</div>
 <script type="text/javascript">
@@ -28,7 +30,30 @@
 	}
 
 	function subBy() {
-		var a = Number(num1.value)
+		var a = Number(num1.value);
+		var b = " - ";
+		var c = Number(num2.value);
+		var d = " = ";
+		var result = a-c;
+		outhtml(a,b,c,d,result);
+	}
+
+	function mulBy() {
+		var a = Number(num1.value);
+		var b = " x ";
+		var c = Number(num2.value);
+		var d = " = ";
+		var result = a*c;
+		outhtml(a,b,c,d,result);
+	}
+
+	function divBy() {
+		var a = Number(num1.value);
+		var b = " / ";
+		var c = Number(num2.value);
+		var d = " = ";
+		var result = a/c;
+		outhtml(a,b,c,d,result);
 	}
 
 	function outhtml(a,b,c,d,result) {
